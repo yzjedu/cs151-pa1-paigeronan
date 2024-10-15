@@ -2,17 +2,18 @@
 # Course:CS*151
 # Due Date:10/09/2024
 # Assignment: pa01
-# Problem Statement:
-# Data In:
-# Data Out:
-# Credits:
+
+# Adventure game using user input to determine what happens
 
 print("You are about to go on an adventure in the woods!")
 
+
 name = input("What is your name? ")
 print("Hello", name, ", answer the questions to see what your adventure will be!")
-
+# first branch either go left or right
 direction = input("You start at a fork in the road, do you want to turn left or right?")
+
+# user goes left and either swims or does not
 if direction == "left":
     print("After going to the left, you find a lake")
     swim_learn = input("Do you know how to swim?")
@@ -27,6 +28,8 @@ if direction == "left":
             print("You swim in the lake.")
     elif swim_learn == "no":
         print("You do not swim in the lake.")
+
+# user goes right and has three pathways
 elif direction == "right":
     print("After going right you are faced with 3 paths ahead.")
     pick_number = int(input("To determine which path you take, enter a number 1-10:"))
@@ -47,5 +50,7 @@ elif direction == "right":
         print("You take the path to the right and find an apple tree!")
         apple = input("What is your favorite apple?")
         print("You pick the", apple, "apple off the tree and eat it")
+
+# end of adventure game
 print("That is the end of your adventure.")
 print("Thank you for playing my game!")
